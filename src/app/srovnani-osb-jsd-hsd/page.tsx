@@ -4,14 +4,20 @@ import { ArrowRight } from "lucide-react";
 import ComparisonTable from "@/components/ComparisonTable";
 
 export const metadata: Metadata = {
-  title: "Srovnání OSB vs JSD P5 vs HSD P7 – rozdíly a použití",
+  title: "Srovnání OSB vs JSD P5 vs HSD P7 – JSD a HSD až o 20 % levnější",
   description:
-    "Podrobné srovnání desek OSB, JSD P5 a HSD P7. Rozdíly v pevnosti, vlhkoodolnosti, povrchu a vhodnosti pro stavebnictví, podlahy a obaly.",
+    "Podrobné srovnání desek OSB, JSD P5 a HSD P7. JSD a HSD jsou až o 20 % levnější než srovnatelné OSB – s lepší pevností, vlhkoodolností a povrchem.",
   alternates: { canonical: "https://nahradaosb.cz/srovnani-osb-jsd-hsd" },
   keywords: ["srovnání OSB JSD HSD", "rozdíl OSB JSD", "JSD vs OSB", "HSD vs OSB", "která deska lepší"],
 };
 
 const differences = [
+  {
+    aspect: "Cena",
+    osb: "Základní referenční cena",
+    jsd: "Až o 20 % nižší cena než OSB srovnatelné třídy – lepší hodnota za peníze",
+    hsd: "Až o 20 % nižší cena než OSB srovnatelné třídy – i při vyšší pevnosti třídy P7",
+  },
   {
     aspect: "Norma a třída",
     osb: "EN 300 OSB/2, OSB/3, OSB/4 – specifická norma pro třískové desky z dlouhých třísek",
@@ -104,17 +110,17 @@ export default function SrovnaniPage() {
             <div className="border border-green-200 bg-green-50/30 rounded-xl p-5">
               <div className="font-bold text-green-800 mb-2">JSD P5 – vhodná když:</div>
               <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Chcete ušetřit až 20 % oproti OSB</li>
                 <li>• Stavba / dřevostavba s vlhkostí</li>
                 <li>• Plovoucí podlahy (4PD)</li>
-                <li>• Podlahové topení (CB16)</li>
                 <li>• Lepší povrch pro CNC</li>
               </ul>
             </div>
             <div className="border border-blue-200 bg-blue-50/30 rounded-xl p-5">
               <div className="font-bold text-blue-800 mb-2">HSD P7 – vhodná když:</div>
               <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Průmyslové obaly</li>
-                <li>• Exportní bedny</li>
+                <li>• Chcete ušetřit až 20 % oproti OSB</li>
+                <li>• Průmyslové obaly a exportní bedny</li>
                 <li>• Těžké průmyslové podlahy</li>
                 <li>• Náročné zatížení konstrukcí</li>
               </ul>

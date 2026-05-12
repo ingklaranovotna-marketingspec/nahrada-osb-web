@@ -14,7 +14,8 @@ export const metadata: Metadata = {
 const specs = [
   { label: "Norma", value: "EN 312 P5" },
   { label: "Formáty (mm)", value: "2840×1830 (ostrohrané), 1800×900, 1800×675 (4PD)" },
-  { label: "Tloušťky (mm)", value: "8, 10, 12, 15, 18, 22 (+ 28 CB16 pro topení)" },
+  { label: "Tloušťky (mm)", value: "8, 10, 12, 15, 18, 22" },
+  { label: "Cena vs. OSB", value: "Až o 20 % nižší než OSB srovnatelné třídy" },
   { label: "Hrana", value: "Ostrohrané nebo perodrážka ze 4 stran (4PD)" },
   { label: "Varianta", value: "Probarvená / neprobarvená" },
   { label: "Výrobce", value: "DDL Lukavec" },
@@ -30,9 +31,9 @@ const usages = [
   },
   {
     id: "podlahy",
-    title: "Podlahy a podlahové topení",
-    desc: "Deska JSD P5/4PD s perodrážkou ze 4 stran je speciálně navržena pro suché plovoucí podlahy. Varianta CB16 (tl. 28 mm) je frézovaná pro systém podlahového vytápění.",
-    items: ["Plovoucí suché podlahy", "Podlahové vytápění (CB16 frézovaná)", "Nosné podlahové skladby", "Rekonstrukce podlah"],
+    title: "Podlahy",
+    desc: "Deska JSD P5/4PD s perodrážkou ze 4 stran je speciálně navržena pro suché plovoucí podlahy.",
+    items: ["Plovoucí suché podlahy", "Nosné podlahové skladby", "Rekonstrukce podlah"],
   },
 ];
 
@@ -58,7 +59,7 @@ export default function JsdP5Page() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">DTD JSD P5</h1>
           <p className="text-lg text-gray-600 max-w-2xl mb-6">
             Univerzální konstrukční dřevotřísková deska pro stavebnictví, podlahy a dřevostavby.
-            Plnohodnotná náhrada OSB s lepší stabilitou a homogennější strukturou.
+            Plnohodnotná náhrada OSB – <strong>až o 20 % levnější</strong> než srovnatelné OSB desky, s lepší stabilitou a hladším povrchem.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
@@ -116,7 +117,7 @@ export default function JsdP5Page() {
       {/* CTA CALCULATOR */}
       <section className="py-12 px-4 bg-white text-center">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Spočítejte spotřebu JSD P5 pro váš projekt</h2>
-        <p className="text-gray-500 mb-5 text-sm">Kalkulačka podporuje podlahy, podlahové topení i dřevostavby.</p>
+        <p className="text-gray-500 mb-5 text-sm">Kalkulačka podporuje podlahy i dřevostavby.</p>
         <Link
           href="/kalkulacka"
           className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-xl text-sm shadow"

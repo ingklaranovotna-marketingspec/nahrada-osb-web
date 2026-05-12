@@ -7,7 +7,7 @@ import { pushEvent } from "@/lib/gtm";
 type Mat = "JSD" | "HSD";
 type Edge = "ostrohrané" | "4PD";
 type Variant = "probarvená" | "neprobarvená";
-type UseType = "floor" | "heating" | "wall";
+type UseType = "floor" | "wall";
 
 interface BoardFormat {
   code: string; thickness: number; width: number; height: number;
@@ -37,7 +37,6 @@ const boardFormats: Record<Mat, BoardFormat[]> = {
     { code:"DTD JSD P5/4PD 15×1800×675 neprobarvená",thickness:15,width:1800,height:675,type:"4PD",      variant:"neprobarvená", weight:10.35},
     { code:"DTD JSD P5/4PD 18×1800×675 neprobarvená",thickness:18,width:1800,height:675,type:"4PD",      variant:"neprobarvená", weight:12.45},
     { code:"DTD JSD P5/4PD 22×1800×675 neprobarvená",thickness:22,width:1800,height:675,type:"4PD",      variant:"neprobarvená", weight:15.20},
-    { code:"DTD JSD P5/4PD podl. vytápění CB16 28×1800×600",thickness:28,width:1800,height:600,type:"4PD",variant:"probarvená",weight:16.52,note:"MJ: ks" },
   ],
   HSD: [
     { code:"DTD HSD P7 10×2840×1830", thickness:10,width:2840,height:1830,type:"ostrohrané",weight:7.45 },
@@ -145,18 +144,6 @@ export default function SmartBoardCalculator() {
 
   function calculate() {
     pushEvent("calculator_open");
-    if (useType === "heating") {
-      const fmt = boardFormats.JSD.find(f=>f.thickness===28);
-      if (!fmt) return;
-      const boardArea = (fmt.width/1000)*(fmt.height/1000);
-      const netArea = rooms.reduce((s,r)=>s+(r.w/1000)*(r.l/1000),0);
-      let raw=0; rooms.forEach(r=>{raw+=boardsForRect(fmt.width,fmt.height,r.w,r.l);});
-      const boards=Math.ceil(raw*(1+reservePct/100));
-      const usedArea=boards*boardArea;
-      const waste=usedArea>0?Math.max(0,(usedArea-netArea)/usedArea*100):0;
-      setResults([{code:fmt.code,width:fmt.width,height:fmt.height,boardArea,boards,waste,netArea,usedArea,totalWeight:+(boards*boardArea*fmt.weight).toFixed(1)}]);
-      setSelectedIdx(0); setCalculated(true); return;
-    }
     const rects = useType==="floor"
       ? rooms.map(r=>({w:r.w,l:r.l}))
       : walls.map(w=>({w:w.w,l:w.h}));
@@ -231,7 +218,7 @@ export default function SmartBoardCalculator() {
             className="border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
           >
             {availableThicknesses.map(t=>(
-              <option key={t} value={t}>{t} mm{t===28?" · CB16 topení":""}</option>
+              <option key={t} value={t}>{t} mm</option>
             ))}
           </select>
         </div>
@@ -243,18 +230,12 @@ export default function SmartBoardCalculator() {
           <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Typ výpočtu</div>
           <div className="flex flex-wrap gap-2">
             <ToggleBtn active={useType==="floor"} onClick={()=>{setUseType("floor");setCalculated(false);}}>Podlaha</ToggleBtn>
-            <ToggleBtn active={useType==="heating"} onClick={()=>{setUseType("heating");setCalculated(false);}}>Podlahové vytápění</ToggleBtn>
             <ToggleBtn active={useType==="wall"} onClick={()=>{setUseType("wall");setCalculated(false);}}>Dřevostavba</ToggleBtn>
           </div>
-          {useType==="heating" && (
-            <div className="mt-2 text-xs text-green-700 bg-green-50 border border-green-200 rounded-lg px-3 py-2">
-              Deska JSD P5/4PD CB16 · 28×1800×600 mm · perodrážka ze 4 stran · pro suchou montáž podlahového topení
-            </div>
-          )}
         </div>
 
         {/* Místnosti nebo stěny */}
-        {(useType==="floor"||useType==="heating") ? (
+        {useType==="floor" ? (
           <div className="space-y-3">
             {rooms.map(room=>(
               <div key={room.id} className="border border-gray-200 rounded-xl p-4 bg-gray-50">
@@ -377,7 +358,7 @@ export default function SmartBoardCalculator() {
               </div>
             </div>
 
-            {/* Format comparison (hide for heating with single result) */}
+            {/* Format comparison */}
             {results.length > 1 && (
               <div>
                 <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">

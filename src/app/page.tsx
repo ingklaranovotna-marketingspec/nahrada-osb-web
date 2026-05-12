@@ -6,19 +6,19 @@ import FaqAccordion from "@/components/FaqAccordion";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Náhrada OSB desek – JSD P5 a HSD P7 konstrukční desky",
+  title: "Náhrada OSB desek – JSD P5 a HSD P7 konstrukční desky až o 20 % levnější",
   description:
-    "Hledáte náhradu za OSB? Konstrukční desky JSD P5 a HSD P7 od DDL Lukavec – lepší stabilita, vlhkoodolnost a povrch. Pro stavebnictví, podlahy i obaly.",
+    "Hledáte náhradu za OSB? Konstrukční desky JSD P5 a HSD P7 jsou až o 20 % levnější než srovnatelné OSB – a přitom nabízí lepší stabilitu, vlhkoodolnost i povrch.",
   alternates: { canonical: "https://nahradaosb.cz" },
 };
 
 const problems = [
+  { title: "Cena", desc: "Až o 20 % levnější než OSB srovnatelných tříd – při vyšší kvalitě." },
   { title: "Stabilita", desc: "Pro náročnější konstrukce a vyšší zatížení." },
   { title: "Přesnost", desc: "Přesnější formát a homogennější struktura materiálu." },
   { title: "Podlahy", desc: "Vhodné pro podlahové skladby a suchou výstavbu." },
   { title: "Vlhkost", desc: "Konstrukční použití i ve vlhkém prostředí (třída P5/P7)." },
   { title: "Obaly", desc: "Pevné desky pro exportní a technické obaly." },
-  { title: "CNC opracování", desc: "Lepší povrch a struktura pro technické zpracování." },
 ];
 
 const useCases = [
@@ -28,7 +28,7 @@ const useCases = [
   },
   {
     title: "Podlahy",
-    items: ["Suché podlahy", "Podlahové topení", "Frézované desky", "Nosné skladby"],
+    items: ["Suché podlahy", "Plovoucí podlahy (4PD)", "Nosné skladby"],
   },
   {
     title: "Obaly",
@@ -39,7 +39,7 @@ const useCases = [
 const homeFaqs = [
   {
     q: "Je JSD náhradou za OSB?",
-    a: "V mnoha aplikacích ano. JSD P5 splňuje normu EN 312 P5 pro konstrukční desky do vlhkého prostředí a v řadě použití nahrazuje nebo překonává standardní OSB.",
+    a: "V mnoha aplikacích ano. JSD P5 splňuje normu EN 312 P5 pro konstrukční desky do vlhkého prostředí, v řadě použití nahrazuje nebo překonává standardní OSB – a je přitom až o 20 % levnější.",
   },
   {
     q: "Jaký je rozdíl mezi JSD a HSD?",
@@ -71,14 +71,14 @@ export default function HomePage() {
       <section className="bg-gradient-to-br from-gray-50 to-white border-b border-gray-100 py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-green-700 bg-green-50 border border-green-200 px-3 py-1.5 rounded-full mb-6">
-            Alternativa k OSB deskám
+            Až o 20 % levnější než srovnatelné OSB
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
             Hledáte náhradu<br />za OSB desky?
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Konstrukční desky <strong>JSD P5</strong> a <strong>HSD P7</strong> pro stavebnictví,
-            podlahy a technické použití. Vyšší stabilita, lepší vlhkoodolnost, domácí výroba.
+            Konstrukční desky <strong>JSD P5</strong> a <strong>HSD P7</strong> jsou <strong>až o 20 % levnější
+            než srovnatelné OSB</strong> – a přitom nabízí vyšší stabilitu, lepší vlhkoodolnost a hladší povrch.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
@@ -138,7 +138,7 @@ export default function HomePage() {
                 Univerzální konstrukční deska pro stavebnictví, podlahy a technické aplikace.
               </p>
               <ul className="space-y-2 mb-6">
-                {["Konstrukční použití EN 312 P5", "Vhodná do vlhkého prostředí", "Dobrý poměr cena/výkon", "Lokální výroba – DDL Lukavec", "Perodrážka (4PD) pro podlahy"].map((b) => (
+                {["Až o 20 % levnější než OSB srovnatelné třídy", "Konstrukční použití EN 312 P5", "Vhodná do vlhkého prostředí", "Lokální výroba – DDL Lukavec", "Perodrážka (4PD) pro podlahy"].map((b) => (
                   <li key={b} className="flex items-center gap-2 text-sm text-gray-700">
                     <CheckCircle2 size={16} className="text-green-600 flex-shrink-0" />
                     {b}
@@ -160,7 +160,7 @@ export default function HomePage() {
                 Vysoce zatížitelná konstrukční deska pro náročné průmyslové aplikace.
               </p>
               <ul className="space-y-2 mb-6">
-                {["Třída P7 – vyšší pevnost", "Průmyslové konstrukce", "Technické a exportní obaly", "Vyšší únosnost a tuhost", "Perodrážka (4PD) dostupná"].map((b) => (
+                {["Až o 20 % levnější než OSB srovnatelné třídy", "Třída P7 – vyšší pevnost", "Průmyslové konstrukce a exportní obaly", "Vyšší únosnost a tuhost", "Perodrážka (4PD) dostupná"].map((b) => (
                   <li key={b} className="flex items-center gap-2 text-sm text-gray-700">
                     <CheckCircle2 size={16} className="text-blue-600 flex-shrink-0" />
                     {b}

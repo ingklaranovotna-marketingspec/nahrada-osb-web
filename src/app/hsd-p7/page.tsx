@@ -15,6 +15,7 @@ const specs = [
   { label: "Norma", value: "EN 312 P7" },
   { label: "Formáty (mm)", value: "2840×1830 (ostrohrané), 1800×900, 1800×675 (4PD)" },
   { label: "Tloušťky (mm)", value: "10, 12, 15, 18, 22, 25" },
+  { label: "Cena vs. OSB", value: "Až o 20 % nižší než OSB srovnatelné třídy" },
   { label: "Hrana", value: "Ostrohrané nebo perodrážka ze 4 stran (4PD)" },
   { label: "Výrobce", value: "DDL Lukavec" },
   { label: "Distributor", value: "Kili s.r.o." },
@@ -41,7 +42,7 @@ export default function HsdP7Page() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">DTD HSD P7</h1>
           <p className="text-lg text-gray-600 max-w-2xl mb-6">
             Vysoce zatížitelná konstrukční dřevotřísková deska pro náročné průmyslové aplikace,
-            exportní obaly a těžké konstrukce. Vyšší pevnost a únosnost než JSD P5.
+            exportní obaly a těžké konstrukce. <strong>Až o 20 % levnější než srovnatelné OSB</strong> – při vyšší pevnosti a únosnosti.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link

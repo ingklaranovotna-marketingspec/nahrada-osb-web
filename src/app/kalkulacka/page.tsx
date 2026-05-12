@@ -4,7 +4,7 @@ import SmartBoardCalculator from "@/components/SmartBoardCalculator";
 export const metadata: Metadata = {
   title: "Kalkulačka spotřeby desek JSD a HSD – SmartBoard Advisor",
   description:
-    "Spočítejte si přesné množství desek JSD P5 nebo HSD P7 pro podlahy, podlahové topení nebo dřevostavby. Kalkulačka prořezu a hmotnosti zdarma.",
+    "Spočítejte si přesné množství desek JSD P5 nebo HSD P7 pro podlahy nebo dřevostavby. Kalkulačka prořezu a hmotnosti zdarma.",
   alternates: { canonical: "https://nahradaosb.cz/kalkulacka" },
   keywords: ["kalkulačka spotřeby desek", "kolik desek JSD", "výpočet spotřeby OSB", "kalkulačka dřevostavba"],
 };

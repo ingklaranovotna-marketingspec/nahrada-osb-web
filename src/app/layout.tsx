@@ -47,12 +47,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="cs" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <head>
-        <GTMScript gtmId="GTM-XXXXXXX" />
+        <GTMScript gtmId="GTM-NB5GQFH4" />
       </head>
       <body className="min-h-full flex flex-col">
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NB5GQFH4"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
