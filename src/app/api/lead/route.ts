@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbz3hX6oUZLheB1oOZIigtqJQZ-xYuKLwoRMqzpfjeEWtUIQZi4IaF5HfQKk59vzwITm/exec";
+const SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbzYRvq36mz-aQsVNP1nBB6RjnCtO8OqExHLbB932ORxMgC7-jJ74onBiUQ9eL6RsDWw/exec";
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
