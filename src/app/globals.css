@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
 :root {
+  --brand: #1a6b3a;
+  --brand-dark: #14532d;
+  --brand-light: #d1fae5;
+  --accent: #f59e0b;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
   --background: #ffffff;
-  --foreground: #171717;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-foreground: var(--text);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Leaflet fix for Next.js */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
 }
