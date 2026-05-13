@@ -1,4 +1,4 @@
-export type DealerType = "kili" | "drevotrust" | "delfy";
+export type DealerType = "kili" | "delfy";
 
 export interface Dealer {
   id: string;
@@ -76,7 +76,7 @@ export const dealers: Dealer[] = [
     url: "https://www.kili.cz/obchodni-centra/oc-prostejov/",
   },
   {
-    id: "kili-strakonice",
+    id: "kili-starecprostejov",
     name: "Kili – OC Strakonice",
     type: "kili",
     address: "Písecká 284",
@@ -101,10 +101,10 @@ export const dealers: Dealer[] = [
   },
   {
     id: "kili-trebic",
-    name: "Kili – OC Třebíč (Starec)",
+    name: "Kili – OC Třebíč (Stařeč)",
     type: "kili",
-    address: "Starec 513",
-    city: "Starec",
+    address: "Stařeč 513",
+    city: "Stařeč",
     lat: 49.221,
     lng: 15.88,
     phone: "+420 724 932 748",
@@ -135,33 +135,6 @@ export const dealers: Dealer[] = [
     email: "zdarns@kili.cz",
     url: "https://www.kili.cz/obchodni-centra/oc-zdar-nad-sazavou/",
   },
-
-  // ── DŘEVOTRUST ───────────────────────────────────────────────────────
-  { id: "dt-bohumin",    name: "Dřevotrust – Bohumín",              type: "drevotrust", address: "1. máje 122",               city: "Bohumín",               lat: 49.909, lng: 18.356, url: "https://www.drevotrust.cz" },
-  { id: "dt-ctestejsin", name: "Dřevotrust – Český Těšín",          type: "drevotrust", address: "Jablunkovská 30",            city: "Český Těšín",           lat: 49.747, lng: 18.624, url: "https://www.drevotrust.cz" },
-  { id: "dt-fm",         name: "Dřevotrust – Frýdek-Místek",        type: "drevotrust", address: "Jamnická 348",               city: "Frýdek-Místek",         lat: 49.681, lng: 18.373, url: "https://www.drevotrust.cz" },
-  { id: "dt-karvina",    name: "Dřevotrust – Karviná",              type: "drevotrust", address: "Rudé armády",                city: "Karviná",               lat: 49.854, lng: 18.543, url: "https://www.drevotrust.cz" },
-  { id: "dt-novyjicin",  name: "Dřevotrust – Nový Jičín",           type: "drevotrust", address: "Nádražní 2318/45",           city: "Nový Jičín",            lat: 49.594, lng: 18.013, url: "https://www.drevotrust.cz" },
-  { id: "dt-ostrava",    name: "Dřevotrust – Ostrava",              type: "drevotrust", address: "U Haldy 189/59",             city: "Ostrava",               lat: 49.834, lng: 18.282, url: "https://www.drevotrust.cz" },
-  { id: "dt-hodonin",    name: "Dřevotrust – Hodonín",              type: "drevotrust", address: "Bratislavská 4495/14",       city: "Hodonín",               lat: 48.848, lng: 17.133, url: "https://www.drevotrust.cz" },
-  { id: "dt-hk",         name: "Dřevotrust – Hradec Králové",       type: "drevotrust", address: "Dřevařská 551",              city: "Hradec Králové",        lat: 50.21,  lng: 15.832, url: "https://www.drevotrust.cz" },
-  { id: "dt-trutnov",    name: "Dřevotrust – Trutnov",              type: "drevotrust", address: "Zahradní ulice",             city: "Trutnov",               lat: 50.561, lng: 15.913, url: "https://www.drevotrust.cz" },
-  { id: "dt-humpolec",   name: "Dřevotrust – Humpolec",             type: "drevotrust", address: "Nerudova 603",               city: "Humpolec",              lat: 49.542, lng: 15.361, url: "https://www.drevotrust.cz" },
-  { id: "dt-jesenik",    name: "Dřevotrust – Jeseník",              type: "drevotrust", address: "Lipovská 735/84",            city: "Jeseník",               lat: 50.227, lng: 17.202, url: "https://www.drevotrust.cz" },
-  { id: "dt-lipnik",     name: "Dřevotrust – Lipník nad Bečvou",   type: "drevotrust", address: "Tyršova 1559",               city: "Lipník nad Bečvou",     lat: 49.524, lng: 17.588, url: "https://www.drevotrust.cz" },
-  { id: "dt-olomouc",    name: "Dřevotrust – Olomouc",              type: "drevotrust", address: "Jeremenkova 10",             city: "Olomouc",               lat: 49.594, lng: 17.251, url: "https://www.drevotrust.cz" },
-  { id: "dt-prostejov",  name: "Dřevotrust – Prostějov",            type: "drevotrust", address: "Určická 5101",               city: "Prostějov",             lat: 49.474, lng: 17.112, url: "https://www.drevotrust.cz" },
-  { id: "dt-sumperk",    name: "Dřevotrust – Šumperk",              type: "drevotrust", address: "Příčná 10",                  city: "Šumperk",               lat: 49.966, lng: 16.971, url: "https://www.drevotrust.cz" },
-  { id: "dt-klatovy",    name: "Dřevotrust – Klatovy",              type: "drevotrust", address: "Dr. Sedláka 466/3",          city: "Klatovy",               lat: 49.395, lng: 13.295, url: "https://www.drevotrust.cz" },
-  { id: "dt-plzen",      name: "Dřevotrust – Plzeň",                type: "drevotrust", address: "Jateční 36",                 city: "Plzeň",                 lat: 49.738, lng: 13.374, url: "https://www.drevotrust.cz" },
-  { id: "dt-kolin",      name: "Dřevotrust – Kolín",                type: "drevotrust", address: "K Vinici 1472",              city: "Kolín",                 lat: 50.027, lng: 15.201, url: "https://www.drevotrust.cz" },
-  { id: "dt-kromeriz",   name: "Dřevotrust – Kroměříž",             type: "drevotrust", address: "Skopalíkova 2600",           city: "Kroměříž",              lat: 49.296, lng: 17.392, url: "https://www.drevotrust.cz" },
-  { id: "dt-valmez",     name: "Dřevotrust – Valašské Meziříčí",   type: "drevotrust", address: "Zašovská 750",               city: "Valašské Meziříčí",     lat: 49.472, lng: 17.972, url: "https://www.drevotrust.cz" },
-  { id: "dt-vsetin",     name: "Dřevotrust – Vsetín",               type: "drevotrust", address: "Na Lapači 856",              city: "Vsetín",                lat: 49.339, lng: 17.997, url: "https://www.drevotrust.cz" },
-  { id: "dt-liberec",    name: "Dřevotrust – Liberec",              type: "drevotrust", address: "Kateřinská 725, Stráž nad Nisou", city: "Liberec",          lat: 50.763, lng: 15.054, url: "https://www.drevotrust.cz" },
-  { id: "dt-turnov",     name: "Dřevotrust – Turnov",               type: "drevotrust", address: "Vesecko 482",                city: "Turnov",                lat: 50.586, lng: 15.158, url: "https://www.drevotrust.cz" },
-  { id: "dt-mllazne",    name: "Dřevotrust – Mariánské Lázně",      type: "drevotrust", address: "Tepelská 551",               city: "Mariánské Lázně",       lat: 49.965, lng: 12.702, url: "https://www.drevotrust.cz" },
-  { id: "dt-vysokemyto", name: "Dřevotrust – Vysoké Mýto",          type: "drevotrust", address: "Průmyslová 75",              city: "Vysoké Mýto",           lat: 49.96,  lng: 16.162, url: "https://www.drevotrust.cz" },
 
   // ── DELFY STAVIVA ────────────────────────────────────────────────────
   {
@@ -215,7 +188,6 @@ export const dealers: Dealer[] = [
 ];
 
 export const dealerConfig: Record<DealerType, { label: string; color: string; bgColor: string }> = {
-  kili:       { label: "Kili",            color: "#1a6b3a", bgColor: "#d1fae5" },
-  drevotrust: { label: "Dřevotrust",      color: "#1d4ed8", bgColor: "#dbeafe" },
-  delfy:      { label: "Delfy Staviva",   color: "#b45309", bgColor: "#fef3c7" },
+  kili:  { label: "Kili",          color: "#1a6b3a", bgColor: "#d1fae5" },
+  delfy: { label: "Delfy Staviva", color: "#b45309", bgColor: "#fef3c7" },
 };
