@@ -57,8 +57,8 @@ export default function SrovnaniPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Srovnání OSB vs. JSD vs. HSD</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Podrobný přehled rozdílů mezi standardními OSB deskami a konstrukčními deskami
-            JSD P5 a HSD P7 od DDL Lukavec.
+            Hledáte náhradu OSB? Porovnejte standardní OSB desky s konstrukčními deskami
+            JSD P5 a HSD P7 od DDL Lukavec – až o 20 % levnější při lepších parametrech.
           </p>
         </div>
       </section>

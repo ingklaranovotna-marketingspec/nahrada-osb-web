@@ -4,11 +4,11 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "HSD P7 – vysoce zatížitelná konstrukční deska P7",
+  title: "HSD P7 – náhrada OSB pro průmysl | konstrukční deska P7 až o 20 % levnější",
   description:
-    "DTD HSD P7 – konstrukční dřevotřísková deska třídy P7 pro náročné průmyslové aplikace, exportní obaly a těžké konstrukce. Výrobce DDL Lukavec.",
+    "DTD HSD P7 – náhrada OSB pro průmyslové aplikace, exportní obaly a těžké konstrukce. Až o 20 % levnější než OSB P7. Výrobce DDL Lukavec, distributor Kili.",
   alternates: { canonical: "https://nahradaosb.cz/hsd-p7" },
-  keywords: ["HSD P7", "konstrukční deska P7", "deska pro obaly", "průmyslová konstrukční deska", "DTD HSD"],
+  keywords: ["HSD P7", "náhrada OSB průmysl", "konstrukční deska P7", "levnější než OSB", "deska pro obaly", "průmyslová konstrukční deska", "DTD HSD"],
 };
 
 const specs = [
@@ -39,9 +39,9 @@ export default function HsdP7Page() {
       <section className="bg-gradient-to-br from-blue-50 to-white border-b border-gray-100 py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-xs font-bold uppercase tracking-widest text-blue-700 mb-2">Třída P7 | EN 312</div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">DTD HSD P7</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">DTD HSD P7 – náhrada OSB pro průmysl</h1>
           <p className="text-lg text-gray-600 max-w-2xl mb-6">
-            Vysoce zatížitelná konstrukční dřevotřísková deska pro náročné průmyslové aplikace,
+            Vysoce zatížitelná konstrukční dřevotřísková deska – moderní náhrada OSB pro průmyslové aplikace,
             exportní obaly a těžké konstrukce. <strong>Až o 20 % levnější než srovnatelné OSB</strong> – při vyšší pevnosti a únosnosti.
           </p>
           <div className="flex flex-wrap gap-3">
