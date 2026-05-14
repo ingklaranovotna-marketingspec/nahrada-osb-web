@@ -60,7 +60,7 @@ export default function Footer() {
             <Link href="/gdpr" className="hover:text-white transition-colors">GDPR</Link>
             <button
               onClick={() => { localStorage.removeItem("cookie_consent"); window.location.reload(); }}
-              className="hover:text-white transition-colors"
+              className="hover:text-white transition-colors cursor-pointer"
             >
               Nastavení cookies
             </button>
