@@ -118,13 +118,21 @@ export default function JsdP5Page() {
       <section className="py-12 px-4 bg-white text-center">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Spočítejte spotřebu JSD P5 pro váš projekt</h2>
         <p className="text-gray-500 mb-5 text-sm">Kalkulačka podporuje podlahy i dřevostavby.</p>
-        <Link
-          href="/kalkulacka"
-          className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-xl text-sm shadow"
-          style={{ backgroundColor: "var(--brand)" }}
-        >
-          Otevřít kalkulačku <ArrowRight size={16} />
-        </Link>
+        <div className="flex flex-wrap gap-3 justify-center">
+          <Link
+            href="/kalkulacka"
+            className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-xl text-sm shadow"
+            style={{ backgroundColor: "var(--brand)" }}
+          >
+            Otevřít kalkulačku <ArrowRight size={16} />
+          </Link>
+          <Link
+            href="/cena-osb-alternativa"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-700 font-semibold rounded-xl text-sm border border-gray-200 hover:bg-gray-50"
+          >
+            Srovnání cen s OSB <ArrowRight size={16} />
+          </Link>
+        </div>
       </section>
 
       {/* LEAD FORM */}

@@ -94,6 +94,12 @@ export default function HomePage() {
             >
               Porovnat s OSB <ChevronRight size={18} />
             </Link>
+            <Link
+              href="/cena-osb-alternativa"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-700 font-semibold rounded-xl text-base border border-gray-200 hover:bg-gray-50 transition-colors"
+            >
+              Srovnání cen <ChevronRight size={18} />
+            </Link>
           </div>
         </div>
       </section>
@@ -186,12 +192,18 @@ export default function HomePage() {
           </h2>
           <p className="text-gray-500 text-center mb-8">Přehledné srovnání klíčových vlastností</p>
           <ComparisonTable />
-          <div className="text-center mt-6">
+          <div className="text-center mt-6 flex flex-wrap gap-4 justify-center">
             <Link
               href="/srovnani-osb-jsd-hsd"
               className="inline-flex items-center gap-1 text-sm font-semibold text-green-700 hover:text-green-800"
             >
               Podrobné srovnání <ChevronRight size={16} />
+            </Link>
+            <Link
+              href="/cena-osb-alternativa"
+              className="inline-flex items-center gap-1 text-sm font-semibold text-green-700 hover:text-green-800"
+            >
+              Srovnání cen OSB vs JSD/HSD <ChevronRight size={16} />
             </Link>
           </div>
         </div>

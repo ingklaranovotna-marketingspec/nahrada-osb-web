@@ -55,6 +55,9 @@ export default function HsdP7Page() {
             <Link href="#poptavka" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 font-semibold rounded-xl text-sm border border-gray-200 hover:bg-gray-50">
               Poptávka
             </Link>
+            <Link href="/cena-osb-alternativa" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 font-semibold rounded-xl text-sm border border-gray-200 hover:bg-gray-50">
+              Srovnání cen s OSB <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>

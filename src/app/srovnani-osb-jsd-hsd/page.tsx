@@ -132,13 +132,21 @@ export default function SrovnaniPage() {
       <section className="py-12 px-4 bg-gray-50 border-t border-gray-100 text-center">
         <div className="max-w-lg mx-auto">
           <p className="text-gray-600 mb-5">Nejste si jistí, která deska je pro váš projekt správná?</p>
-          <Link
-            href="/kontakt"
-            className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-xl text-sm shadow"
-            style={{ backgroundColor: "var(--brand)" }}
-          >
-            Doporučit vhodnou desku <ArrowRight size={16} />
-          </Link>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <Link
+              href="/kontakt"
+              className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-xl text-sm shadow"
+              style={{ backgroundColor: "var(--brand)" }}
+            >
+              Doporučit vhodnou desku <ArrowRight size={16} />
+            </Link>
+            <Link
+              href="/cena-osb-alternativa"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-700 font-semibold rounded-xl text-sm border border-gray-200 hover:bg-gray-50"
+            >
+              Srovnání cen OSB vs JSD/HSD <ArrowRight size={16} />
+            </Link>
+          </div>
         </div>
       </section>
     </>
