@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 export default function Footer() {
@@ -19,6 +20,7 @@ export default function Footer() {
               <li><Link href="/jsd-p5" className="hover:text-white transition-colors">JSD P5</Link></li>
               <li><Link href="/hsd-p7" className="hover:text-white transition-colors">HSD P7</Link></li>
               <li><Link href="/srovnani-osb-jsd-hsd" className="hover:text-white transition-colors">Srovnání s OSB</Link></li>
+              <li><Link href="/cena-osb-alternativa" className="hover:text-white transition-colors">Cena vs. OSB</Link></li>
               <li><Link href="/kalkulacka" className="hover:text-white transition-colors">Kalkulačka spotřeby</Link></li>
             </ul>
           </div>
@@ -56,7 +58,12 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Kili, s.r.o. | DDL Lukavec. Všechna práva vyhrazena.</p>
           <div className="flex gap-4">
             <Link href="/gdpr" className="hover:text-white transition-colors">GDPR</Link>
-            <Link href="/obchodni-podminky" className="hover:text-white transition-colors">Obchodní podmínky</Link>
+            <button
+              onClick={() => { localStorage.removeItem("cookie_consent"); window.location.reload(); }}
+              className="hover:text-white transition-colors"
+            >
+              Nastavení cookies
+            </button>
           </div>
         </div>
       </div>
