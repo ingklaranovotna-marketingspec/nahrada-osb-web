@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Náhrada OSB desek | JSD P5 a HSD P7",
     description:
       "Konstrukční desky JSD P5 a HSD P7 – moderní alternativa k OSB pro stavebnictví, podlahy a technické aplikace.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
