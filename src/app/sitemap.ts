@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/jsd-p5`,                      lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/hsd-p7`,                      lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/srovnani-osb-jsd-hsd`,        lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/cena-osb-alternativa`,         lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/kalkulacka`,                  lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/kde-koupit`,                  lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/faq`,                         lastModified: now, changeFrequency: "monthly", priority: 0.7 },
