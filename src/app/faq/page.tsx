@@ -17,7 +17,7 @@ const faqs = [
   { q: "Lze desky formátovat a CNC opracovávat?", a: "Ano. Homogenní struktura JSD a HSD je pro CNC opracování výrazně příznivější než OSB s vrstvou třísek. Desky lze řezat, frézovat, vrtat i brousit." },
   { q: "Jsou desky vhodné pro exportní obaly?", a: "Ano, zejména HSD P7. Vyšší hustota a pevnost zaručují odolnost přepravních beden při manipulaci. Pro lehčí obaly je vhodná i JSD P5." },
   { q: "Jaký je výrobce JSD a HSD desek?", a: "Výrobcem je DDL Lukavec – česká firma s dlouholetou tradicí výroby dřevotřískových desek. Distribuci zajišťuje Kili s.r.o. se sítí 10 obchodních center po ČR." },
-  { q: "Kde jsou desky dostupné?", a: "U tří sítí prodejců: Kili (10 poboček), Dřevotrust (25 prodejen) a Delfy Staviva (4 prodejny v severních Čechách). Kompletní mapu najdete na stránce Kde koupit." },
+  { q: "Kde jsou desky dostupné?", a: "V síti obchodních center Kili (10 poboček) a Delfy Staviva (4 prodejny v severních Čechách). Kompletní mapu najdete na stránce Kde koupit." },
   { q: "Jaká je dostupnost různých tloušťek?", a: "JSD P5 (ostrohrané): 8, 10, 12, 15, 18, 22 mm. JSD P5 (4PD): 12, 15, 18, 22 mm. HSD P7 (ostrohrané): 10, 12, 15, 18, 22, 25 mm. HSD P7 (4PD): 15, 18, 22, 25 mm." },
 ];
 

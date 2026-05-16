@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import LeadForm from "@/components/LeadForm";
@@ -37,27 +38,42 @@ export default function HsdP7Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <section className="bg-gradient-to-br from-blue-50 to-white border-b border-gray-100 py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-xs font-bold uppercase tracking-widest text-blue-700 mb-2">Třída P7 | EN 312</div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">DTD HSD P7 – náhrada OSB pro průmysl</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mb-6">
-            Vysoce zatížitelná konstrukční dřevotřísková deska – moderní náhrada OSB pro průmyslové aplikace,
-            exportní obaly a těžké konstrukce. <strong>Až o 20 % levnější než srovnatelné OSB</strong> – při vyšší pevnosti a únosnosti.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="/kalkulacka"
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-white font-semibold rounded-xl text-sm shadow"
-              style={{ backgroundColor: "var(--brand)" }}
-            >
-              Spočítat spotřebu <ArrowRight size={16} />
-            </Link>
-            <Link href="#poptavka" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 font-semibold rounded-xl text-sm border border-gray-200 hover:bg-gray-50">
-              Poptávka
-            </Link>
-            <Link href="/cena-osb-alternativa" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 font-semibold rounded-xl text-sm border border-gray-200 hover:bg-gray-50">
-              Srovnání cen s OSB <ArrowRight size={16} />
-            </Link>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <div className="text-xs font-bold uppercase tracking-widest text-blue-700 mb-2">Třída P7 | EN 312</div>
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">DTD HSD P7 – náhrada OSB pro průmysl</h1>
+              <p className="text-lg text-gray-600 mb-6">
+                Vysoce zatížitelná konstrukční dřevotřísková deska – moderní náhrada OSB pro průmyslové aplikace,
+                exportní obaly a těžké konstrukce. <strong>Až o 20 % levnější než srovnatelné OSB</strong> – při vyšší pevnosti a únosnosti.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/kalkulacka"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 text-white font-semibold rounded-xl text-sm shadow"
+                  style={{ backgroundColor: "var(--brand)" }}
+                >
+                  Spočítat spotřebu <ArrowRight size={16} />
+                </Link>
+                <Link href="#poptavka" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 font-semibold rounded-xl text-sm border border-gray-200 hover:bg-gray-50">
+                  Poptávka
+                </Link>
+                <Link href="/cena-osb-alternativa" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 font-semibold rounded-xl text-sm border border-gray-200 hover:bg-gray-50">
+                  Srovnání cen s OSB <ArrowRight size={16} />
+                </Link>
+              </div>
+            </div>
+            <figure className="rounded-2xl overflow-hidden shadow-md">
+              <Image
+                src="/hsd-p7-konstrukcni-deska-vlhkoodolna.webp"
+                alt="DTD HSD P7 konstrukční deska s vlhkoodolnou vrstvou – náhrada OSB pro průmysl"
+                title="Konstrukční dřevotřísková deska HSD P7 třídy P7 dle EN 312 – výrobce DDL Lukavec"
+                width={600}
+                height={450}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </figure>
           </div>
         </div>
       </section>

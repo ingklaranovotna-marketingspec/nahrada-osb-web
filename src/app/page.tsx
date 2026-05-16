@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
 import ComparisonTable from "@/components/ComparisonTable";
@@ -68,38 +69,47 @@ export default function HomePage() {
       />
 
       {/* HERO */}
-      <section className="bg-gradient-to-br from-gray-50 to-white border-b border-gray-100 py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-green-700 bg-green-50 border border-green-200 px-3 py-1.5 rounded-full mb-6">
-            Až o 20 % levnější než srovnatelné OSB
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
-            Hledáte náhradu<br />za OSB desky?
-          </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Konstrukční desky <strong>JSD P5</strong> a <strong>HSD P7</strong> jsou <strong>až o 20 % levnější
-            než srovnatelné OSB</strong> – a přitom nabízí vyšší stabilitu, lepší vlhkoodolnost a hladší povrch.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href="/kontakt"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-white font-semibold rounded-xl text-base shadow transition-colors"
-              style={{ backgroundColor: "var(--brand)" }}
-            >
-              Doporučit vhodnou desku <ArrowRight size={18} />
-            </Link>
-            <Link
-              href="/srovnani-osb-jsd-hsd"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-700 font-semibold rounded-xl text-base border border-gray-200 hover:bg-gray-50 transition-colors"
-            >
-              Porovnat s OSB <ChevronRight size={18} />
-            </Link>
-            <Link
-              href="/cena-osb-alternativa"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-700 font-semibold rounded-xl text-base border border-gray-200 hover:bg-gray-50 transition-colors"
-            >
-              Srovnání cen <ChevronRight size={18} />
-            </Link>
+      <section className="bg-gradient-to-br from-gray-50 to-white border-b border-gray-100 py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-green-700 bg-green-50 border border-green-200 px-3 py-1.5 rounded-full mb-6">
+                Až o 20 % levnější než srovnatelné OSB
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
+                Hledáte náhradu<br />za OSB desky?
+              </h1>
+              <p className="text-lg text-gray-600 mb-8">
+                Konstrukční desky <strong>JSD P5</strong> a <strong>HSD P7</strong> jsou <strong>až o 20 % levnější
+                než srovnatelné OSB</strong> – a přitom nabízí vyšší stabilitu, lepší vlhkoodolnost a hladší povrch.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/kontakt"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-white font-semibold rounded-xl text-base shadow transition-colors"
+                  style={{ backgroundColor: "var(--brand)" }}
+                >
+                  Doporučit vhodnou desku <ArrowRight size={18} />
+                </Link>
+                <Link
+                  href="/srovnani-osb-jsd-hsd"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-700 font-semibold rounded-xl text-base border border-gray-200 hover:bg-gray-50 transition-colors"
+                >
+                  Porovnat s OSB <ChevronRight size={18} />
+                </Link>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/jsd-p5-deska-nahrada-osb-2.webp"
+                alt="Konstrukční deska JSD P5 – dřevotřísková deska jako náhrada OSB"
+                title="DTD JSD P5 – konstrukční dřevotřísková deska jako náhrada OSB, výrobce DDL Lukavec"
+                width={1400}
+                height={1050}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -137,7 +147,18 @@ export default function HomePage() {
           </h2>
           <p className="text-gray-500 text-center mb-10">Výrobce DDL Lukavec, distributor Kili s.r.o.</p>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-2xl border border-gray-200 p-7 shadow-sm">
+            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+              <figure className="relative h-44 overflow-hidden">
+                <Image
+                  src="/jsd-p5-konstrukcni-deska-nahrada-osb.webp"
+                  alt="Konstrukční deska JSD P5 – alternativa OSB pro stavebnictví a podlahy"
+                  title="DTD JSD P5 – konstrukční dřevotřísková deska třídy P5"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </figure>
+              <div className="p-7">
               <div className="text-xs font-bold uppercase tracking-widest text-green-700 mb-1">Třída P5</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">JSD P5</h3>
               <p className="text-gray-600 mb-5">
@@ -157,9 +178,21 @@ export default function HomePage() {
               >
                 Detail JSD P5 <ArrowRight size={16} />
               </Link>
+              </div>
             </div>
 
-            <div className="bg-white rounded-2xl border border-gray-200 p-7 shadow-sm">
+            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+              <figure className="relative h-44 overflow-hidden">
+                <Image
+                  src="/hsd-p7-konstrukcni-deska-vlhkoodolna.webp"
+                  alt="Konstrukční deska HSD P7 s vlhkoodolnou vrstvou – alternativa OSB pro průmysl"
+                  title="DTD HSD P7 – konstrukční dřevotřísková deska třídy P7"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </figure>
+              <div className="p-7">
               <div className="text-xs font-bold uppercase tracking-widest text-blue-700 mb-1">Třída P7</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">HSD P7</h3>
               <p className="text-gray-600 mb-5">
@@ -179,6 +212,7 @@ export default function HomePage() {
               >
                 Detail HSD P7 <ArrowRight size={16} />
               </Link>
+              </div>
             </div>
           </div>
         </div>

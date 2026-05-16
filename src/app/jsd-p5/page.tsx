@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import LeadForm from "@/components/LeadForm";
@@ -34,6 +35,10 @@ const usages = [
     title: "Podlahy",
     desc: "Deska JSD P5/4PD s perodrážkou ze 4 stran je speciálně navržena pro suché plovoucí podlahy.",
     items: ["Plovoucí suché podlahy", "Nosné podlahové skladby", "Rekonstrukce podlah"],
+    images: [
+      { src: "/jsd-p5-podlahova-deska-perodraska.webp", alt: "JSD P5 podlahová deska s perodrážkou 4PD – plovoucí podlahy", title: "DTD JSD P5 s perodrážkou ze 4 stran (4PD) pro plovoucí podlahy" },
+      { src: "/jsd-p5-podlahova-deska-topeni.webp", alt: "JSD P5 podlahová deska s podlahovým topením – frézované drážky", title: "DTD JSD P5 s frézovanými drážkami pro podlahové topení" },
+    ],
   },
 ];
 
@@ -54,27 +59,42 @@ export default function JsdP5Page() {
 
       {/* HERO */}
       <section className="bg-gradient-to-br from-green-50 to-white border-b border-gray-100 py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-xs font-bold uppercase tracking-widest text-green-700 mb-2">Třída P5 | EN 312</div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">DTD JSD P5</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mb-6">
-            Univerzální konstrukční dřevotřísková deska pro stavebnictví, podlahy a dřevostavby.
-            Plnohodnotná náhrada OSB – <strong>až o 20 % levnější</strong> než srovnatelné OSB desky, s lepší stabilitou a hladším povrchem.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="/kalkulacka"
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-white font-semibold rounded-xl text-sm shadow"
-              style={{ backgroundColor: "var(--brand)" }}
-            >
-              Spočítat spotřebu <ArrowRight size={16} />
-            </Link>
-            <Link
-              href="#poptavka"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 font-semibold rounded-xl text-sm border border-gray-200 hover:bg-gray-50"
-            >
-              Poptávka
-            </Link>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <div className="text-xs font-bold uppercase tracking-widest text-green-700 mb-2">Třída P5 | EN 312</div>
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">DTD JSD P5</h1>
+              <p className="text-lg text-gray-600 mb-6">
+                Univerzální konstrukční dřevotřísková deska pro stavebnictví, podlahy a dřevostavby.
+                Plnohodnotná náhrada OSB – <strong>až o 20 % levnější</strong> než srovnatelné OSB desky, s lepší stabilitou a hladším povrchem.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/kalkulacka"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 text-white font-semibold rounded-xl text-sm shadow"
+                  style={{ backgroundColor: "var(--brand)" }}
+                >
+                  Spočítat spotřebu <ArrowRight size={16} />
+                </Link>
+                <Link
+                  href="#poptavka"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 font-semibold rounded-xl text-sm border border-gray-200 hover:bg-gray-50"
+                >
+                  Poptávka
+                </Link>
+              </div>
+            </div>
+            <figure className="rounded-2xl overflow-hidden shadow-md">
+              <Image
+                src="/jsd-p5-deska-nahrada-osb.webp"
+                alt="DTD JSD P5 konstrukční deska – náhrada OSB pro stavebnictví a podlahy"
+                title="Konstrukční dřevotřísková deska JSD P5 třídy P5 dle EN 312 – výrobce DDL Lukavec"
+                width={1400}
+                height={1050}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </figure>
           </div>
         </div>
       </section>
@@ -101,6 +121,23 @@ export default function JsdP5Page() {
             <div key={u.id} id={u.id}>
               <h2 className="text-xl font-bold text-gray-900 mb-2">{u.title}</h2>
               <p className="text-gray-600 mb-4">{u.desc}</p>
+              {"images" in u && u.images && (
+                <div className="grid sm:grid-cols-2 gap-4 mb-5">
+                  {u.images.map((img) => (
+                    <figure key={img.src} className="rounded-xl overflow-hidden shadow-sm border border-gray-200">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        title={img.title}
+                        width={540}
+                        height={300}
+                        className="w-full h-48 object-cover"
+                        sizes="(max-width: 640px) 100vw, 50vw"
+                      />
+                    </figure>
+                  ))}
+                </div>
+              )}
               <ul className="grid sm:grid-cols-2 gap-2">
                 {u.items.map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm text-gray-700">

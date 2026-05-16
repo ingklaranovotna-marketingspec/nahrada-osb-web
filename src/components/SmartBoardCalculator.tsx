@@ -247,18 +247,18 @@ export default function SmartBoardCalculator() {
                     </button>
                   )}
                 </div>
-                <div className="flex gap-3">
-                  <div>
+                <div className="flex flex-wrap gap-3">
+                  <div className="flex-1 min-w-[110px]">
                     <label className="text-xs text-gray-500 font-medium block mb-1">Šířka (mm)</label>
                     <input type="number" value={room.w} min={1}
                       onChange={e=>setRooms(r=>r.map(x=>x.id===room.id?{...x,w:Number(e.target.value)}:x))}
-                      className="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"/>
+                      className="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"/>
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-[110px]">
                     <label className="text-xs text-gray-500 font-medium block mb-1">Délka (mm)</label>
                     <input type="number" value={room.l} min={1}
                       onChange={e=>setRooms(r=>r.map(x=>x.id===room.id?{...x,l:Number(e.target.value)}:x))}
-                      className="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"/>
+                      className="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"/>
                   </div>
                 </div>
               </div>
@@ -280,18 +280,18 @@ export default function SmartBoardCalculator() {
                     </button>
                   )}
                 </div>
-                <div className="flex gap-3">
-                  <div>
+                <div className="flex flex-wrap gap-3">
+                  <div className="flex-1 min-w-[110px]">
                     <label className="text-xs text-gray-500 font-medium block mb-1">Šířka (mm)</label>
                     <input type="number" value={wall.w} min={1}
                       onChange={e=>setWalls(w=>w.map(x=>x.id===wall.id?{...x,w:Number(e.target.value)}:x))}
-                      className="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"/>
+                      className="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"/>
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-[110px]">
                     <label className="text-xs text-gray-500 font-medium block mb-1">Výška (mm)</label>
                     <input type="number" value={wall.h} min={1}
                       onChange={e=>setWalls(w=>w.map(x=>x.id===wall.id?{...x,h:Number(e.target.value)}:x))}
-                      className="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"/>
+                      className="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"/>
                   </div>
                 </div>
               </div>

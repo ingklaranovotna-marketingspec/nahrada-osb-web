@@ -112,7 +112,7 @@ export default function DealerMap() {
 
       <div className="grid lg:grid-cols-[1fr_320px] gap-4 items-start">
         {/* Map */}
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden" style={{ height: 520 }}>
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden h-72 sm:h-96 lg:h-[520px]">
           <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
           <div ref={mapRef} style={{ height: "100%", width: "100%" }} />
         </div>
